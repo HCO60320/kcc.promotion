@@ -42,3 +42,5 @@ Web.Debug.config
 Web.Release.config
 
 .vs
+*.vssscc
+*.vssc

@@ -1,0 +1,66 @@
+﻿ body, div, p, h1, h2, h3, h4, ul, li, table
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    padding: 0;
+    font-family: helvetica;
+}
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{  
+	visibility : hidden;
+	margin : 0px!important;
+	background-color : #ffffff;
+	color : windowtext;
+	/*border : buttonshadow;
+	border-width : 1px;
+	border-style : solid;*/
+	border:1px solid #bcb8b8;
+	cursor : 'default';
+	overflow : auto;
+	height : auto;
+    text-align : left; 
+    list-style-type : none;
+    font-weight:bold;
+	color:#666666;
+	font-size:11px;
+    -webkit-box-shadow: 3px 4px 30px rgba(50, 50, 50, 0.65);
+    -moz-box-shadow:    3px 4px 30px rgba(50, 50, 50, 0.65);
+    box-shadow:         3px 4px 10px rgba(50, 50, 50, 0.65);
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	/*background-color: #ffff99;*/
+    background:-o-linear-gradient(bottom, #3e9cf9 5%, #0163c4 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3e9cf9), color-stop(1, #0163c4) );
+	background:-moz-linear-gradient( center top, #3e9cf9 5%, #0163c4 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#3e9cf9", endColorstr="#0163c4");
+	background: -o-linear-gradient(top,#3e9cf9,0163c4);
+
+	background-color:#3e9cf9;
+	padding: 1px;
+	font-weight:bold;
+	color:#FFFFFF;
+	font-size:11px;
+	padding-top:10px;
+	padding-left:5px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;	
+	padding : 1px;
+	font-weight:bold;
+	color:#666666;
+	font-size:11px;
+	padding-top:10px;
+	padding-left:5px;
+}
+

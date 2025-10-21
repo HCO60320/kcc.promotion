@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IncidentReportWebMethod.aspx.cs" Inherits="KCC.PROMOTION.WebMethods.IncidentReportWebMethod" %>

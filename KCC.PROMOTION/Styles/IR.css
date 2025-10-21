@@ -1,0 +1,21 @@
+﻿.detail-font {
+    font-size: 12px;
+}
+
+.align-left {
+    /*float: left;*/
+    text-align:left;
+}
+
+.align-right {
+    /*float: right;*/
+    text-align:right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.custom-txt {
+    height: 20px;
+}

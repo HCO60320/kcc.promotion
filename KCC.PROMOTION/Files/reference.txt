@@ -1,0 +1,3 @@
+DELIMIT PLUGIN
+	https://github.com/ameliandev/KeyboardDelimiter
+	http://www.amelian.eu/keyboarddelimiter/

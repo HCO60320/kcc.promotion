@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PortalService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.32.178/MerchAppManager/Portal.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.32.178/MerchAppManager/Portal.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.32.178/MerchAppManager/Portal.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/KCC.Merch.AppManager.Core.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAutoEmailLogs_GetAllAppTranRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAppTranRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_GetAllAppTranRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAppTranRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_GetAppTranRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppTranRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_GetAppTranRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppTranRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_ConfirmAppTranRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmAppTranRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_ConfirmAppTranRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmAppTranRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_AddAutoEmailLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAutoEmailLogs" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_AddAutoEmailLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAutoEmailLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_ModifyAutoEmailLogStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAutoEmailLogStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAutoEmailLogs_ModifyAutoEmailLogStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyAutoEmailLogStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetAllOutTownModeApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOutTownModeApp" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetAllOutTownModeApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOutTownModeAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetOutTownModeApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutTownModeApp" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetOutTownModeApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOutTownModeAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_AddOutTownMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOutTownMode" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_AddOutTownMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOutTownModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_ModifyOutTownMode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyOutTownMode" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_ModifyOutTownMode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyOutTownModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetAllApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplication" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetAllApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplication" />
+  </wsdl:message>
+  <wsdl:message name="IOutTownMode_GetApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetUserAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccess" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetUserAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetAllActiveUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActiveUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetAllActiveUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActiveUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IUser_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ModifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ModifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetDatabaseDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabaseDate" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetDatabaseDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabaseDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAutoEmailLogs">
+    <wsdl:operation name="GetAllAppTranRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoEmailLogs/GetAllAppTranRequest" message="tns:IAutoEmailLogs_GetAllAppTranRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoEmailLogs/GetAllAppTranRequestResponse" message="tns:IAutoEmailLogs_GetAllAppTranRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppTranRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoEmailLogs/GetAppTranRequest" message="tns:IAutoEmailLogs_GetAppTranRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoEmailLogs/GetAppTranRequestResponse" message="tns:IAutoEmailLogs_GetAppTranRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmAppTranRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoEmailLogs/ConfirmAppTranRequest" message="tns:IAutoEmailLogs_ConfirmAppTranRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoEmailLogs/ConfirmAppTranRequestResponse" message="tns:IAutoEmailLogs_ConfirmAppTranRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAutoEmailLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoEmailLogs/AddAutoEmailLogs" message="tns:IAutoEmailLogs_AddAutoEmailLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoEmailLogs/AddAutoEmailLogsResponse" message="tns:IAutoEmailLogs_AddAutoEmailLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAutoEmailLogStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoEmailLogs/ModifyAutoEmailLogStatus" message="tns:IAutoEmailLogs_ModifyAutoEmailLogStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoEmailLogs/ModifyAutoEmailLogStatusResponse" message="tns:IAutoEmailLogs_ModifyAutoEmailLogStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IOutTownMode">
+    <wsdl:operation name="GetAllOutTownModeApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutTownMode/GetAllOutTownModeApp" message="tns:IOutTownMode_GetAllOutTownModeApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutTownMode/GetAllOutTownModeAppResponse" message="tns:IOutTownMode_GetAllOutTownModeApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutTownModeApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutTownMode/GetOutTownModeApp" message="tns:IOutTownMode_GetOutTownModeApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutTownMode/GetOutTownModeAppResponse" message="tns:IOutTownMode_GetOutTownModeApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOutTownMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutTownMode/AddOutTownMode" message="tns:IOutTownMode_AddOutTownMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutTownMode/AddOutTownModeResponse" message="tns:IOutTownMode_AddOutTownMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOutTownMode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutTownMode/ModifyOutTownMode" message="tns:IOutTownMode_ModifyOutTownMode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutTownMode/ModifyOutTownModeResponse" message="tns:IOutTownMode_ModifyOutTownMode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutTownMode/GetAllApplication" message="tns:IOutTownMode_GetAllApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutTownMode/GetAllApplicationResponse" message="tns:IOutTownMode_GetAllApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutTownMode/GetApplication" message="tns:IOutTownMode_GetApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutTownMode/GetApplicationResponse" message="tns:IOutTownMode_GetApplication_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUser">
+    <wsdl:operation name="GetUserAccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetUserAccess" message="tns:IUser_GetUserAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetUserAccessResponse" message="tns:IUser_GetUserAccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetAllUsers" message="tns:IUser_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetAllUsersResponse" message="tns:IUser_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetAllActiveUsers" message="tns:IUser_GetAllActiveUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetAllActiveUsersResponse" message="tns:IUser_GetAllActiveUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/AddUser" message="tns:IUser_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/AddUserResponse" message="tns:IUser_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ModifyUser" message="tns:IUser_ModifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ModifyUserResponse" message="tns:IUser_ModifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetDatabaseDate" message="tns:IUser_GetDatabaseDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetDatabaseDateResponse" message="tns:IUser_GetDatabaseDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAutoEmailLogs" type="tns:IAutoEmailLogs">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllAppTranRequest">
+      <soap:operation soapAction="http://tempuri.org/IAutoEmailLogs/GetAllAppTranRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppTranRequest">
+      <soap:operation soapAction="http://tempuri.org/IAutoEmailLogs/GetAppTranRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmAppTranRequest">
+      <soap:operation soapAction="http://tempuri.org/IAutoEmailLogs/ConfirmAppTranRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAutoEmailLogs">
+      <soap:operation soapAction="http://tempuri.org/IAutoEmailLogs/AddAutoEmailLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAutoEmailLogStatus">
+      <soap:operation soapAction="http://tempuri.org/IAutoEmailLogs/ModifyAutoEmailLogStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IOutTownMode" type="tns:IOutTownMode">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllOutTownModeApp">
+      <soap:operation soapAction="http://tempuri.org/IOutTownMode/GetAllOutTownModeApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutTownModeApp">
+      <soap:operation soapAction="http://tempuri.org/IOutTownMode/GetOutTownModeApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOutTownMode">
+      <soap:operation soapAction="http://tempuri.org/IOutTownMode/AddOutTownMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOutTownMode">
+      <soap:operation soapAction="http://tempuri.org/IOutTownMode/ModifyOutTownMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplication">
+      <soap:operation soapAction="http://tempuri.org/IOutTownMode/GetAllApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplication">
+      <soap:operation soapAction="http://tempuri.org/IOutTownMode/GetApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IUser" type="tns:IUser">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserAccess">
+      <soap:operation soapAction="http://tempuri.org/IUser/GetUserAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IUser/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveUsers">
+      <soap:operation soapAction="http://tempuri.org/IUser/GetAllActiveUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IUser/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <soap:operation soapAction="http://tempuri.org/IUser/ModifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseDate">
+      <soap:operation soapAction="http://tempuri.org/IUser/GetDatabaseDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PortalService">
+    <wsdl:port name="BasicHttpBinding_IAutoEmailLogs" binding="tns:BasicHttpBinding_IAutoEmailLogs">
+      <soap:address location="http://192.168.32.178/MerchAppManager/Portal.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IOutTownMode" binding="tns:BasicHttpBinding_IOutTownMode">
+      <soap:address location="http://192.168.32.178/MerchAppManager/Portal.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IUser" binding="tns:BasicHttpBinding_IUser">
+      <soap:address location="http://192.168.32.178/MerchAppManager/Portal.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
