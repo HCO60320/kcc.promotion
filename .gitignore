@@ -1,0 +1,44 @@
+# Build results
+[Bb]in
+[Oo]bj
+Debug
+Release
+x64
+x86
+
+# VS cruft
+.vs
+.user
+.suo
+.userosscache
+.sln.docstates
+
+# NuGet
+packages
+!packagesbuild
+!packagesrepositories.config
+.nupkg
+project.lock.json
+.snupkg
+
+# Publish outputs
+app.publish
+.Publish.xml
+
+# IISServer
+_publishedWebsites
+.pfx
+.p12
+
+# Logstemp
+.log
+.tlog
+.cache
+.tmp
+
+# Web specifics
+.user.config
+Web.Debug.config
+Web.Release.config
+
+.vs
